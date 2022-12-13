@@ -1,0 +1,16 @@
+email:
+  from: ['邮件来源显示名称', 'example@163.com'] # 发送方
+  user: example@example.com # 发送邮件的账户 同发送方
+  passwd: xxxxxxxxxxxxxx # 发送邮件的密码（非邮件账户密码）
+  smtp: smtp.163.com # smtp 邮件服务器
+  port: 465 # 端口 ssl 为 True 时填 465
+  ssl: True # 是否使用 ssl 加密
+  # 配置收件人，同发送方
+  to: [['收件人1名称', example1@163.com'], ['收件人2名称', example2@163.com']]
+
+# 需要进行剧集信息搜索的分类名称（qBittorrent的分类）
+bangumiCategory: Bangumi
+
+# 媒体库的地址与图标url
+mediaUrl: https://media.example.com
+mediaIcon: https://picbed.example.com/media.png
