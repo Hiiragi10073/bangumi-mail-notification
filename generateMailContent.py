@@ -1,8 +1,10 @@
+import os
 import re
 from functools import partial
 
 def getTemplate(filePath):
-  file = open(filePath, encoding='utf-8')
+  currentPath = os.path.dirname(__file__)
+  file = open(os.path.join(currentPath, filePath), encoding='utf-8')
   fileData = file.read()
   file.close()
   return fileData
