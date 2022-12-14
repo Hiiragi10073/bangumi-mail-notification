@@ -1,7 +1,9 @@
 import yaml
+import os
 
 def loadYaml(path):
-  file = open(path, encoding='utf-8')
+  currentPath = os.path.dirname(__file__)
+  file = open(os.path.join(currentPath, path), encoding='utf-8')
   configData = file.read()
   file.close()
 

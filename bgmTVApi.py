@@ -1,11 +1,13 @@
+import os
 import requests
 from requests import exceptions
 
 # 消除ssl告警
 requests.packages.urllib3.disable_warnings()
 
-tokenFile = open('accessToken', encoding = "utf-8")
-token = tokenFile.read()
+currentPath = os.path.dirname(__file__)
+tokenFile = open(os.path.join(currentPath, 'accessToken'), encoding = "utf-8")
+token = tokenFile.read().splitlines()[0]
 tokenFile.close()
 
 headers = { 'Authorization': f'Bearer {token}', 'Content-Type': 'application/json',  'User-Agent': 'Hiiragi/bangumi-mail-notification' }
